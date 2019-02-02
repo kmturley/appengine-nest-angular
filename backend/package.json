@@ -1,0 +1,39 @@
+{
+  "name": "appengine-nest",
+  "description": "An example TypeScript app running on Google App Engine.",
+  "version": "0.0.1",
+  "author": "kmturley",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "main": "dist/main.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "pretest": "npm run build",
+    "build": "tsc -p tsconfig.build.json",
+    "deploy": "gcloud app deploy",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "start": "node ./dist/main.js",
+    "start:dev": "nodemon",
+    "start:debug": "nodemon --config nodemon-debug.json",
+    "test": "repo-tools test app -- dist/main.js",
+    "gcp-build": "npm run build"
+  },
+  "dependencies": {
+    "@nestjs/common": "^5.6.2",
+    "@nestjs/core": "^5.6.2",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.9",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.3.3",
+    "ts-node": "^8.0.2",
+    "tsconfig-paths": "^3.7.0",
+    "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "^3.0.0",
+    "@types/express": "^4.16.0",
+    "tslint": "^5.11.0"
+  }
+}

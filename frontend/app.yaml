@@ -1,0 +1,11 @@
+runtime: nodejs10
+service: default
+
+handlers:
+- url: /
+  static_files: dist/browser/index.html
+  upload: dist/browser/index.html
+
+- url: /(.*)
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*)
