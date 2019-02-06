@@ -42,13 +42,29 @@ View the Angular frontend at:
     http://localhost:4200/
 
 
-## Deployment
+## Automatic Deployment
+
+Go to Google Cloud Build:
+
+    https://console.cloud.google.com/cloud-build/triggers
+
+Click 'Add Trigger' and name it 'Backend'. Then set Cloud Build configuration file location:
+
+    /backend/cloudbuild.yaml
+
+Click 'Add Trigger' and name it 'Frontend'. Then set Cloud Build configuration file location:
+
+    /frontend/cloudbuild.yaml
+
+
+## Manual Deployment
 
 Deploy backend service:
 
     cd backend
     gcloud init
     npm install
+    npm run build
     npm run deploy
 
 Deploy frontend service:
@@ -56,6 +72,7 @@ Deploy frontend service:
     cd frontend
     gcloud init
     npm install
+    npm run build
     npm run deploy
 
 

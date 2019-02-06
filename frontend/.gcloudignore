@@ -1,4 +1,4 @@
-# Exclude compiled files
+# Dist folder needs to be uploaded on deploy, if serving static_files using app.yaml 
 # dist/
 
 # Exclude dependencies

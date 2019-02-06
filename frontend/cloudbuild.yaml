@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  dir: 'frontend'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/npm'
+  dir: 'frontend'
+  args: ['run', 'build']
+- name: "gcr.io/cloud-builders/gcloud"
+  dir: 'frontend'
+  args: ["app", "deploy"]
+timeout: "1600s"
