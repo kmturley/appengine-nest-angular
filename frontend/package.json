@@ -11,7 +11,7 @@
     "build": "ng build --prod --aot",
     "deploy": "gcloud app deploy",
     "lint": "ng lint",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0",
     "test": "ng test",
     "e2e": "ng e2e"
   },

@@ -6,36 +6,25 @@ Example full-stack Typescript project using:
 * NodeJS 10.x
 * NestJS 5.6.x
 * Angular 7.2.x
+* Docker 18.x
 
 
 ## Installation
 
-Install backend dependencies using:
+Install dependencies and build images using:
 
-    cd backend
-    npm install
-
-Install frontend dependencies using:
-
-    cd frontend
-    npm install
+    docker-compose build
 
 
 ## Usage
 
-Run the Nest backend:
+Run the backend and frontend together using:
 
-    cd backend
-    npm run start:dev
+    docker-compose up
 
 View the Nest backend at:
 
     http://localhost:8080/
-
-Run the Angular frontend:
-
-    cd frontend
-    npm start
 
 View the Angular frontend at:
 

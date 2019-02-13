@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  backend:
+    build: ./backend
+    command: npm run start:dev
+    ports:
+      - 8080:8080
+    volumes:
+      - ./backend:/usr/src/app:rw
+      - /usr/src/app/node_modules
+
+  frontend:
+    build: ./frontend
+    command: npm start
+    ports:
+      - 4200:4200
+    volumes:
+      - ./frontend:/usr/src/app:rw
+      - /usr/src/app/node_modules
